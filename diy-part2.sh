@@ -11,8 +11,8 @@
 #
 # cp -rf ../megatron package/megatron
 
-rm -rf feeds/luci/applications/luci-app-aria2
-rm -rf feeds/packages/net/aria2
+# rm -rf feeds/luci/applications/luci-app-aria2
+# rm -rf feeds/packages/net/aria2
 # cp -rf ../luci-app-aria2 feeds/luci/applications/luci-app-aria2
 # cp -rf ../aria2 feeds/packages/net/aria2
 
