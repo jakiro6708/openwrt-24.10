@@ -75,6 +75,12 @@ jobs:
         [ -e files ] && mv files openwrt/files
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
+        rm -rf openwrt/feeds/luci/applications/luci-app-aria2
+        rm -rf openwrt/feeds/packages/net/aria2
+        cp -rf luci-app-aria2 openwrt/feeds/luci/applications/luci-app-aria2
+        cp -rf aria2 openwrt/feeds/packages/net/aria2
+        cp -rf megatron openwrt/package/megatron
+        cp luciMenu.py openwrt/luciMenu.py
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P2_SH
 
