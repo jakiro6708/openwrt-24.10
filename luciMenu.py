@@ -72,8 +72,6 @@ def readFile(file, k):
             print(file)
 
 
-# a1 = 'admin/services'
-# b1 = '"admin", "services"'
 
 for r, dirs, files in os.walk('feeds'):
     for file in files:
@@ -87,4 +85,4 @@ for r, dirs, files in os.walk('feeds'):
                     print(e)
                     pass
 
-print(len(xx))
+# print(len(xx))
