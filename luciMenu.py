@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import os
-# import re
+import re
 import json
 
 luciBase = {
