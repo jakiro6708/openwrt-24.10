@@ -1,20 +1,17 @@
+# SPDX-License-Identifier: GPL-3.0-only
 #
-# Copyright (C) 2021 ImmortalWrt
-# <https://immortalwrt.org>
-#
-# This is free software, licensed under the GNU General Public License v3.
-# See /LICENSE for more information.
-#
+# Copyright (C) 2022 ImmortalWrt.org
 
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=vlmcsd
-PKG_VERSION:=svn1113
-PKG_RELEASE:=5
+PKG_RELEASE:=4
 
-PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.gz
-PKG_SOURCE_URL:=https://codeload.github.com/Wind4/vlmcsd/tar.gz/$(PKG_VERSION)?
-PKG_HASH:=62f55c48f5de1249c2348ab6b96dabbe7e38899230954b0c8774efb01d9c42cc
+PKG_SOURCE_PROTO:=git
+PKG_SOURCE_URL:=https://github.com/Wind4/vlmcsd.git
+PKG_SOURCE_DATE:=2020-03-30
+PKG_SOURCE_VERSION:=e599080486478e219cd065e141d6de050a450c27
+PKG_MIRROR_HASH:=0daa66c27aa917db13b26d444f04d73ea16925ef021405f5dd6e11ff9f9d034f
 
 PKG_LICENSE:=MIT
 PKG_LICENSE_FILES:=LICENSE
@@ -30,6 +27,7 @@ define Package/vlmcsd
   TITLE:=A KMS Emulator in C
   URL:=https://github.com/Wind4/vlmcsd
   DEPENDS:=+libpthread
+  USERID:=vlmcsd:vlmcsd
 endef
 
 define Package/vlmcsd/description
